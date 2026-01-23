@@ -1,0 +1,11 @@
+{
+  "name": "velavain-exports",
+  "version": "1.0.0",
+  "description": "VELAVAIN Exports - Premium Spices & Seafood Website",
+  "scripts": {
+    "start": "npx http-server -p 8080"
+  },
+  "keywords": ["export", "spices", "seafood", "velavain"],
+  "author": "VELAVAIN Exports",
+  "license": "ISC"
+}

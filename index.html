@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VELAVAIN Exports - Premium Spices & Seafood Exporter from Kakinada, India">
+    <title>VELAVAIN Exports - Premium Spices & Seafood</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #2c5f2d;
+            --secondary-color: #ff6b35;
+            --accent-color: #ffd23f;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1e4620 100%);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            width: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: transparent;
+            filter: brightness(1.1);
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 90vh;
+            background: url('images/image.png') center center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(44, 95, 45, 0.85) 0%, rgba(30, 70, 32, 0.75) 50%, rgba(44, 95, 45, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .btn-hero {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1.6s ease;
+        }
+
+        .btn-primary-custom {
+            background: var(--secondary-color);
+            border: none;
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background: #ff8555;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: #2c5f2d;
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1e4620 100%);
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 3rem 0 2rem 0;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+        }
+
+        /* Product Cards */
+        .product-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .product-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .product-card-body {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .product-specs {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-specs li {
+            padding: 0.4rem 0;
+            color: #666;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .product-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .product-specs strong {
+            color: var(--primary-color);
+        }
+
+        .btn-product {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enquiry {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-enquiry:hover {
+            background: #1e4620;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 5rem 0;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2c5f2d, #1e4620);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(44, 95, 45, 0.15);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .cert-badge {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .cert-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Trust Badges */
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin: 0.5rem;
+        }
+
+        .trust-badge i {
+            color: var(--accent-color);
+        }
+
+        /* MOQ Badge */
+        .moq-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Price Tag */
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 0.5rem 0;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        /* Features Grid */
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Download Button */
+        .btn-download {
+            background: var(--accent-color);
+            color: var(--dark-color);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: #ffd700;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 210, 63, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.jpeg" alt="VELAVAIN Exports Logo">
+                <span>VELAVAIN EXPORTS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="hero-title">Premium Quality<br>Spices & Seafood</h1>
+                    <p class="hero-subtitle">From Kakinada to the World</p>
+                    <p class="hero-text">Your trusted partner for authentic Indian spices and fresh seafood exports.
+                        Experience excellence in every grain, every spice, every catch.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#products" class="btn btn-primary-custom btn-hero">Explore Products</a>
+                        <a href="#contact" class="btn btn-outline-custom btn-hero">Get Quote</a>
+                    </div>
+                    <div class="mt-4">
+                        <span class="trust-badge"><i class="bi bi-shield-check"></i> FSSAI Certified</span>
+                        <span class="trust-badge"><i class="bi bi-globe"></i> Export License</span>
+                        <span class="trust-badge"><i class="bi bi-award"></i> ISO Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number">17+</div>
+                        <div class="stat-label">Premium Products</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <div class="stat-number">2026</div>
+                        <div class="stat-label">Established</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-5" id="products">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Our Premium Products</h2>
+                <p class="section-subtitle">Discover our range of authentic Indian spices and fresh seafood</p>
+            </div>
+
+            <!-- SPICES CATEGORY -->
+            <div class="text-center mb-4" data-aos="fade-up">
+                <h3 class="category-title"><i class="bi bi-stars me-2"></i>Premium Spices</h3>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <!-- Basmati Rice -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/rice-user.png" alt="Basmati Rice">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Basmati Rice</h5>
+                            <span class="moq-badge">MOQ: 5 Tons</span>
+                            <div class="price-tag">Starting from $950/ton</div>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Long Grain</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Packaging:</strong> 25kg/50kg bags</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coriander Seeds -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/coriander-user.png" alt="Coriander Seeds">
+                            <span class="product-badge">Fresh</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Coriander Seeds</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Export Grade</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Type:</strong> Whole Seeds</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cumin Seeds -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/cumin-user.png" alt="Cumin Seeds">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Cumin Seeds</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Pure & Natural</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Type:</strong> Whole Seeds</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fennel Seeds -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/fennel-user.png" alt="Fennel Seeds">
+                            <span class="product-badge">Fresh</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Fennel Seeds</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Aromatic</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Type:</strong> Whole Seeds</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinnamon Sticks -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/cinnamon-premium.png" alt="Cinnamon">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Cinnamon Sticks</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Premium Grade</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Flavor:</strong> Sweet & Warm</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turmeric Powder -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/turmeric-premium.png" alt="Turmeric">
+                            <span class="product-badge">Organic</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Turmeric Powder</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Pure & Natural</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Color:</strong> Vibrant Yellow</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red Chillies -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/red-chillies-premium.png" alt="Red Chillies">
+                            <span class="product-badge">Hot</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Dried Red Chillies</h5>
+                            <ul class="product-specs">
+                                <li><strong>Types:</strong> All Varieties</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Heat:</strong> Mild to Hot</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green Cardamom -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="450">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/green-cardamom-premium.png" alt="Green Cardamom">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Green Cardamom</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Export Superior</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Rich & Fragrant</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Black Cardamom -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/black-cardamom.jpg" alt="Black Cardamom">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Black Cardamom</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Premium Grade</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Smoky & Bold</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bay Leaves -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="550">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/bay-leaves-premium.png" alt="Bay Leaves">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Bay Leaves (Tej Patta)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Premium Whole Leaf</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Distinctive & Aromatic</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Star Anise -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/star-anise-premium.png" alt="Star Anise">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Star Anise (Chakra Phool)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Whole Flower</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Strong & Licorice-like</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mace -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="650">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/mace-premium.png" alt="Mace">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Mace (Javitri)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Premium Whole Spice</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Color:</strong> Reddish-Orange</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutmeg -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/nutmeg-premium.png" alt="Nutmeg">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Nutmeg (Jaiphal)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Whole Premium Grade</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Warm & Sweet</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloves -->
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="750">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/cloves-premium.jpg" alt="Cloves">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Cloves (Laung)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Quality:</strong> Premium Whole</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Aroma:</strong> Strong & Aromatic</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEAFOOD CATEGORY -->
+            <div class="text-center mb-4 mt-5" data-aos="fade-up">
+                <h3 class="category-title"><i class="bi bi-water me-2"></i>Fresh Seafood</h3>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <!-- White Shrimp -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/white-shrimp-premium.png" alt="White Shrimp">
+                            <span class="product-badge">Fresh</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">White Shrimp (Vannamei)</h5>
+                            <ul class="product-specs">
+                                <li><strong>Condition:</strong> Fresh/Frozen</li>
+                                <li><strong>Origin:</strong> India</li>
+                                <li><strong>Size:</strong> Medium to Large</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Pomfret -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/pomfret-premium.png" alt="Pomfret">
+                            <span class="product-badge">Fresh</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Silver Pomfret</h5>
+                            <ul class="product-specs">
+                                <li><strong>Condition:</strong> Fresh</li>
+                                <li><strong>Origin:</strong> Kakinada Port</li>
+                                <li><strong>Quality:</strong> Premium</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salmon -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card">
+                        <div class="product-image-wrapper">
+                            <img src="images/salmon-premium.png" alt="Salmon">
+                            <span class="product-badge">Fresh</span>
+                        </div>
+                        <div class="product-card-body">
+                            <h5 class="product-title">Fresh Salmon</h5>
+                            <ul class="product-specs">
+                                <li><strong>Condition:</strong> Fresh/Frozen</li>
+                                <li><strong>Origin:</strong> Premium Quality</li>
+                                <li><strong>Type:</strong> Fillet</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-enquiry btn-product">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Certifications & Quality</h2>
+                <p class="section-subtitle">Trusted by international buyers worldwide</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-badge">
+                        <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
+                        <h5>FSSAI Certified</h5>
+                        <p class="text-muted">Food Safety Standards</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-badge">
+                        <div class="cert-icon"><i class="bi bi-globe"></i></div>
+                        <h5>Export License</h5>
+                        <p class="text-muted">Authorized Exporter</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-badge">
+                        <div class="cert-icon"><i class="bi bi-award"></i></div>
+                        <h5>ISO Certified</h5>
+                        <p class="text-muted">Quality Management</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-badge">
+                        <div class="cert-icon"><i class="bi bi-patch-check"></i></div>
+                        <h5>Export Quality</h5>
+                        <p class="text-muted">Premium Grade Products</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Why Choose VELAVAIN Exports?</h2>
+                <p class="section-subtitle">Your trusted partner for quality exports</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="bi bi-box-seam"></i></div>
+                        <h5>Bulk Orders</h5>
+                        <p class="text-muted">Flexible MOQ and competitive pricing for bulk orders</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="bi bi-truck"></i></div>
+                        <h5>Worldwide Shipping</h5>
+                        <p class="text-muted">FOB/CIF options, delivery in 15-30 days</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+                        <h5>Quality Assured</h5>
+                        <p class="text-muted">Certified products with quality guarantee</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="bi bi-headset"></i></div>
+                        <h5>24/7 Support</h5>
+                        <p class="text-muted">Dedicated support team for your queries</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#contact" class="btn btn-download btn-lg">
+                    <i class="bi bi-file-earmark-pdf me-2"></i>Download Product Catalog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by businesses worldwide</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Excellent quality spices with consistent supply. Their basmati rice
+                            is the best we've imported from India. Highly recommended!"</p>
+                        <div class="testimonial-author">Ahmed Al-Rashid</div>
+                        <div class="testimonial-company">Al-Rashid Trading Co., UAE</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Professional service and timely delivery. The seafood quality is
+                            outstanding. We've been ordering for 2 years now."</p>
+                        <div class="testimonial-author">David Chen</div>
+                        <div class="testimonial-company">Global Foods Ltd., Singapore</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <p class="testimonial-text">"Best supplier for Indian spices. Competitive pricing and excellent
+                            customer support. Very satisfied with their service."</p>
+                        <div class="testimonial-author">Maria Rodriguez</div>
+                        <div class="testimonial-company">Spice World Inc., USA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Ready to place an order? Contact us today!</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5 class="mb-3">Our Location</h5>
+                        <p class="text-muted">Kakinada, Andhra Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5 class="mb-3">Email Us</h5>
+                        <p class="text-muted">info@velavainexports.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5 class="mb-3">Call Us</h5>
+                        <p class="text-muted">+91 7093632115</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-card">
+                        <div class="contact-icon" style="background: #25d366;">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h5 class="mb-3">WhatsApp</h5>
+                        <p class="text-muted">+91 7093632115</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="contact-card">
+                        <h4 class="mb-4">Send us a message</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" required>
+                                        <option value="">Select Product Category</option>
+                                        <option value="spices">Spices</option>
+                                        <option value="seafood">Seafood</option>
+                                        <option value="both">Both</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-custom btn-lg w-100">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">VELAVAIN EXPORTS</h5>
+                    <p class="text-muted">Your trusted partner for premium Indian spices and fresh seafood exports
+                        worldwide.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="footer-title">Products</h5>
+                    <ul class="footer-links">
+                        <li><a href="#products">Spices</a></li>
+                        <li><a href="#products">Seafood</a></li>
+                        <li><a href="#products">Rice</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <ul class="footer-links">
+                        <li>Kakinada, Andhra Pradesh</li>
+                        <li>info@velavainexports.com</li>
+                        <li>+91 XXXXXXXXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1)">
+            <div class="text-center">
+                <p class="mb-0 text-muted">&copy; 2026 VELAVAIN Exports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917093632115?text=Hello%20VELAVAIN%20Exports!%20I'm%20interested%20in%20your%20products."
+        class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+</body>
+
+</html>

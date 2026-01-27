@@ -23,6 +23,31 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+
+        // Track product views
+        function trackProductView(productName, category) {
+            gtag('event', 'view_item', {
+                'item_name': productName,
+                'item_category': category
+            });
+        }
+
+        // Track quote requests
+        function trackQuoteRequest(productName) {
+            gtag('event', 'generate_lead', {
+                'event_category': 'engagement',
+                'event_label': productName
+            });
+        }
+    </script>
+
     <style>
         :root {
             --primary-color: #2c5f2d;
@@ -1654,6 +1679,21 @@
         class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="bi bi-whatsapp"></i>
     </a>
+
+    <!-- Tawk.to Live Chat Widget -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/YOUR_WIDGET_ID';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>

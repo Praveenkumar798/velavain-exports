@@ -48,6 +48,53 @@
         }
     </script>
 
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "VELAVAIN Exports",
+      "url": "https://velavain-exports.onrender.com",
+      "logo": "https://velavain-exports.onrender.com/images/logo.jpeg",
+      "description": "Premium Indian Spices & Seafood Exporter from Kakinada. FSSAI & ISO certified. Worldwide shipping.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kakinada",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-7093632115",
+        "contactType": "Sales",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/velavain-exports",
+        "https://www.facebook.com/velavainexports"
+      ]
+    }
+    </script>
+
+    <!-- Facebook Pixel (Replace with your Pixel ID) -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+
     <style>
         :root {
             --primary-color: #2c5f2d;
@@ -702,6 +749,150 @@
                 height: 50px;
                 bottom: 20px;
                 right: 20px;
+            }
+        }
+
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: none;
+            animation: slideUp 0.5s ease;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .cookie-text p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .cookie-text a {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cookie-accept {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .cookie-accept:hover {
+            background: #1e4620;
+            transform: translateY(-2px);
+        }
+
+        .cookie-decline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cookie-decline:hover {
+            background: white;
+            color: var(--dark-color);
+        }
+
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            background: #ff5722;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6);
+        }
+
+
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 80px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+
+            .whatsapp-float {
                 font-size: 25px;
             }
 
@@ -1671,6 +1862,88 @@
                     });
                 });
             });
+        });
+    </script>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>🍪 We use cookies to improve your experience and analyze website traffic. By continuing to use our
+                    website, you agree to our use of cookies. <a href="#"
+                        onclick="alert('Privacy Policy: We respect your privacy and only use essential cookies for analytics.'); return false;">Learn
+                        more</a></p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Cookie and Scroll JavaScript -->
+    <script>
+        // Cookie Consent
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+
+        // Show cookie banner if not accepted/declined
+        window.addEventListener('load', function () {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(() => {
+                    document.getElementById('cookieBanner').classList.add('show');
+                }, 2000); // Show after 2 seconds
+            }
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Track scroll depth for analytics
+        let scrollDepth = 0;
+        window.addEventListener('scroll', function () {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const trackDepth = Math.floor((scrollTop + windowHeight) / documentHeight * 100);
+
+            if (trackDepth > scrollDepth && trackDepth % 25 === 0) {
+                scrollDepth = trackDepth;
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'engagement',
+                        'event_label': trackDepth + '%'
+                    });
+                }
+            }
         });
     </script>
 

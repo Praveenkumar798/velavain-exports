@@ -138,21 +138,11 @@
             color: white;
         }
 
-        /* Navbar Styles - Enhanced */
+        /* Navbar Styles - Simple */
         .navbar {
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #2c5f2d 0%, #1e4620 100%);
             padding: 1rem 0;
-            box-shadow: var(--shadow-md);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            padding: 0.5rem 0;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
@@ -164,7 +154,6 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            transition: all 0.3s ease;
         }
 
         .navbar-brand img {
@@ -174,15 +163,12 @@
             border-radius: 50%;
             background: transparent;
             filter: brightness(1.1);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .navbar-brand:hover img {
-            transform: scale(1.1) rotate(5deg);
-            border-color: var(--accent-color);
-            box-shadow: 0 6px 20px rgba(255, 210, 63, 0.4);
+            transform: scale(1.05);
         }
 
         .navbar-nav .nav-link {
@@ -190,32 +176,10 @@
             font-weight: 500;
             margin: 0 0.5rem;
             transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 1rem !important;
-            border-radius: 8px;
         }
 
         .navbar-nav .nav-link:hover {
             color: var(--accent-color) !important;
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .navbar-nav .nav-link:hover::after {
-            width: 60%;
         }
 
         /* Hero Section - Enhanced */
@@ -408,40 +372,20 @@
             display: inline-block;
         }
 
-        /* Product Cards - Premium Design */
+        /* Product Cards - Simple Design */
         .product-card {
             border: none;
-            border-radius: 24px;
+            border-radius: 15px;
             overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             height: 100%;
             background: white;
-            position: relative;
-        }
-
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg,
-                    rgba(44, 95, 45, 0.03) 0%,
-                    rgba(255, 107, 53, 0.03) 100%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: 0;
-        }
-
-        .product-card:hover::before {
-            opacity: 1;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
         }
 
         .product-card-img {
@@ -449,7 +393,7 @@
             overflow: hidden;
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: #f8f9fa;
         }
 
         .product-card-img img {
@@ -457,7 +401,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover .product-card-img img {
@@ -466,81 +410,44 @@
 
         .premium-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--gradient-3);
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #ffd23f, #ffb700);
             color: var(--dark-color);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(255, 210, 63, 0.4);
             z-index: 2;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
         }
 
         .moq-badge {
-            background: var(--gradient-1);
+            background: var(--primary-color);
             color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
             font-weight: 600;
             display: inline-block;
             margin-bottom: 0.5rem;
-            box-shadow: 0 4px 15px rgba(44, 95, 45, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover .moq-badge {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px rgba(44, 95, 45, 0.4);
         }
 
         .price-tag {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            background: var(--gradient-2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--secondary-color);
             margin: 0.5rem 0;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover .price-tag {
-            transform: scale(1.1);
         }
 
         .product-card-body {
-            padding: 1.8rem;
-            position: relative;
-            z-index: 1;
+            padding: 1.5rem;
         }
 
         .product-title {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--dark-color);
             margin-bottom: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .product-card:hover .product-title {
-            color: var(--primary-color);
         }
 
         .product-specs {
@@ -550,26 +457,10 @@
         }
 
         .product-specs li {
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
             color: #666;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border-bottom: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .product-specs li::before {
-            content: '✓';
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-right: 8px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .product-card:hover .product-specs li::before {
-            opacity: 1;
         }
 
         .product-specs li:last-child {
@@ -583,42 +474,21 @@
 
         .btn-product {
             width: 100%;
-            padding: 1rem;
-            border-radius: 12px;
+            padding: 0.8rem;
+            border-radius: 8px;
             font-weight: 600;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
+            transition: all 0.3s ease;
             border: none;
         }
 
-        .btn-product::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn-product:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
         .btn-enquiry {
-            background: var(--gradient-1);
+            background: var(--primary-color);
             color: white;
-            box-shadow: 0 4px 15px rgba(44, 95, 45, 0.3);
         }
 
         .btn-enquiry:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(44, 95, 45, 0.4);
+            background: #1e4620;
+            transform: translateY(-2px);
             color: white;
         }
 
@@ -2010,32 +1880,7 @@
     <script>
         AOS.init({
             duration: 800,
-            once: true,
-            offset: 100
-        });
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function () {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth Scroll for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+            once: true
         });
 
         // Product Filter Functionality
